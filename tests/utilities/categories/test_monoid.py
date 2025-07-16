@@ -5,7 +5,7 @@ import numpy as np
 import pytest
 import qsharp   # type: ignore
 
-from ..setup import init_qsharp
+from setup import init_qsharp
 
 init_qsharp()
 

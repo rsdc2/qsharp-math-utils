@@ -4,6 +4,8 @@ namespace Matrices.Complex.Types {
     import Std.Diagnostics.*;
     import Matrices.Complex.Multiply.*;
 
+    /// A structure representing a Complex-valued matrix 
+    /// with a scalar component
     struct MatrixC {scalar : Complex, matrix : Complex[][]}
 
     /// Constructor function for MatrixC type, checking that the array

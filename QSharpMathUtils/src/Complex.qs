@@ -5,7 +5,9 @@ namespace Complex {
 
     /// Return the conjugate of a complex number
     function Conjugate(complex : Complex) : Complex {
-        if complex.Imag == 0. { return complex };
+        if complex.Imag == 0. { 
+            return complex 
+        };
         complex w/ Imag <- -complex.Imag
     }
 

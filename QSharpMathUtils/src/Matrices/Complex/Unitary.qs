@@ -7,10 +7,12 @@ namespace Matrices.Complex.Unitary {
     import Matrices.Complex.Comparison.*;
 
     /// Return true if the matrix is unitary, i.e. 
-    /// both invertible and its inverse is equal
+    /// it is 1. invertible and 2. its inverse is equal
     /// to its adjoint
     function IsUnitary(A : Complex[][]) : Bool {
-        if not IsInvertibleC(A) { return false }
+        if not IsInvertibleC(A) { 
+            return false 
+        }
         
         let adj = GetAdjoint(A);
         let inverse = Inverted2x2C(A);

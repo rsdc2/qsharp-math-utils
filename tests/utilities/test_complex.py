@@ -1,5 +1,5 @@
 import qsharp 
-from .setup import init_qsharp
+from setup import init_qsharp
 
 init_qsharp()
 

@@ -1,6 +1,6 @@
 import qsharp # type: ignore
 import pytest
-from ..setup import init_qsharp
+from setup import init_qsharp
 
 init_qsharp()
 

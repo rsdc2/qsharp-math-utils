@@ -16,7 +16,7 @@ namespace Vectors {
     function VecMulScalarT<'T>(x : 'T, vec : 'T[], mul : ('T, 'T) -> 'T) : 'T[] {
         Mapped(y -> mul(x, y), vec)
     }
-    
+
     /// Multiply a complex vector by a scalar complex
     function VecMulScalarC(x : Complex, A : Complex[]) : Complex[] {
         Mapped(y -> TimesC(x, y), A)

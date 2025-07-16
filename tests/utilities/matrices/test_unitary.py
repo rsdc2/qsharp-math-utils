@@ -1,7 +1,7 @@
 import qsharp 
 import pytest
 from math import sqrt
-from ..setup import init_qsharp
+from setup import init_qsharp
 
 init_qsharp()
 

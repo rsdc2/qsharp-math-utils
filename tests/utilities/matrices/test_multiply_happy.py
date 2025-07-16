@@ -2,14 +2,11 @@ import qsharp # type: ignore
 import numpy as np
 import pytest
 
-from ..setup import init_qsharp
+from setup import init_qsharp
+from qsharp_code.matmul import matrix_dot_product
 
 init_qsharp()
 
-def matrix_dot_product_code(m1: list[list[float]], m2: list[list[float]]) -> str:
-    return (f"import Matrices.*;"
-              "import Matrices.Multiply.*;"
-              f"MatMulD({m1}, {m2});")
 
 @pytest.mark.parametrize(("m1", "m2"), [
     ([[1., 2.], 
@@ -32,7 +29,7 @@ def test_matrix_dot_product_happy(m1: list[list[float]], m2: list[list[float]]):
     B = np.array(m2)
 
     # Act
-    qscode = matrix_dot_product_code(m1, m2)
+    qscode = matrix_dot_product(m1, m2)
     R = np.array(qsharp.eval(qscode))
 
     # Assert
@@ -49,7 +46,7 @@ def test_matrix_dot_product_happy(m1: list[list[float]], m2: list[list[float]]):
       [-1., 9.]])
 ])
 def test_matrix_dot_product_sad(m1: list[list[float]], m2: list[list[float]]):
-    qscode = matrix_dot_product_code(m1, m2)
+    qscode = matrix_dot_product(m1, m2)
 
     with pytest.raises(qsharp.QSharpError):
         qsharp.eval(qscode)

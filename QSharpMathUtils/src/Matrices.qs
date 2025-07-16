@@ -14,7 +14,7 @@ namespace Matrices {
         Mapped(ToVecC, A)
     }   
 
-    /// Convert a complex matrix into a real matrix
+    /// Convert a Complex-valued matrix into a real matrix
     /// by taking only the real components of all
     /// the complex numbers
     function ToRealMat(A : Complex[][]) : Double[][] {
@@ -22,6 +22,4 @@ namespace Matrices {
     }
 
     export ToCMat, ToRealMat;
-
-    
 }

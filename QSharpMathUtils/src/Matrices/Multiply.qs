@@ -21,5 +21,4 @@ namespace Matrices.Multiply {
     }
 
     export MatMulScalarT, MatMulT, MatMulD;
-
 }

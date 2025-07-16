@@ -18,6 +18,7 @@ namespace Matrices.Inverse {
         Determinant2x2D(A) != 0.
     }
 
+    /// Invert a 2x2 matrix of double
     function Inverted2x2D(A : Double[][]) : Double[][] {
         Fact(IsInvertibleD(A), "Matrix must be invertible");
         let (a, b, c, d) = (A[0][0], A[0][1], A[1][0], A[1][1]);
