@@ -7,6 +7,8 @@ This is a utility library I am writing as I learn Q# and quantum programming. It
 - Matrices: `Matrices.qs` and the `Matrices` folder, namespace `Utilities.Matrices`
 - Higher order functions: `HigherOrderFunctions.qs`
 
+Q# Maths Utilities is still in development.
+
 ## Running
 
 ### With VSCode and the QDK
